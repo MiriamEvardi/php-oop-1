@@ -8,6 +8,7 @@ class Movie
     public $plot;
     public $language;
     public $genres = array();
+    public $director;
 
 
     // constructor    
@@ -18,6 +19,7 @@ class Movie
      * @param  int $_year
      * @param  string $_plot
      * @param  string $_language
+     * @param  array $_genres
      */
 
     function __construct($_title, $_year, $_plot, $_language, $_genres)

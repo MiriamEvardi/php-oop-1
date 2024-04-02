@@ -32,6 +32,7 @@ require 'db.php';
                 echo "
             <li>
                 " . $movie->getFullMovie() . "
+                " . $movie->director?->getDirector() . "
             </li>";
             }
             ?>
