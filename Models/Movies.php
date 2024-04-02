@@ -4,6 +4,7 @@
 class Movie
 {
     public $title;
+    public $trailerUrl;
     public $year;
     public $plot;
     public $language;
@@ -16,15 +17,17 @@ class Movie
      * __construct
      *
      * @param  string $_title
+     * @param  string $_trailerUrl
      * @param  int $_year
      * @param  string $_plot
      * @param  string $_language
      * @param  array $_genres
      */
 
-    function __construct($_title, $_year, $_plot, $_language, $_genres)
+    function __construct($_title, $_trailerUrl, $_year, $_plot, $_language, $_genres)
     {
         $this->title = $_title;
+        $this->trailerUrl = $_trailerUrl;
         $this->year = $_year;
         $this->plot = $_plot;
         $this->language = $_language;
@@ -35,6 +38,11 @@ class Movie
     public function getFullMovie()
     {
         $genresString = implode(', ', $this->genres);
-        return '<b>' . $this->title . '</b>' . ' <br> Release: ' . $this->year . ', <br> ' . $this->plot . '. <br> Original language: ' . $this->language . '. <br> Genres: ' . $genresString;
+        return '<br> Release: ' . $this->year . ', <br> ' . $this->plot . '. <br> Original language: ' . $this->language . '. <br> Genres: ' . $genresString;
+    }
+
+    public function getTrailerUrl()
+    {
+        return $this->trailerUrl;
     }
 }
