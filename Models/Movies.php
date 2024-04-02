@@ -38,7 +38,7 @@ class Movie
     public function getFullMovie()
     {
         $genresString = implode(', ', $this->genres);
-        return '<br> Release: ' . $this->year . ', <br> ' . $this->plot . '. <br> Original language: ' . $this->language . '. <br> Genres: ' . $genresString;
+        return '<br> Release: <b>' . $this->year . '</b>, <br> <i>' . $this->plot . '. </i> <br> Original language: <b>' . $this->language . ' </b> <br> Genres: <i>' . $genresString . '</i>';
     }
 
     public function getTrailerUrl()

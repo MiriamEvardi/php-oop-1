@@ -2,10 +2,6 @@
 
 require 'db.php';
 
-// __________________________________________________________________________________________________
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +15,7 @@ require 'db.php';
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- CSS -->
-
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -37,7 +33,7 @@ require 'db.php';
                   <div class='text-center mb-5 mt-5'>
                       <iframe src='" . $movie->getTrailerUrl() . "' frameborder='0' allowfullscreen width='600' height='400'></iframe>
                   </div>
-                  <p class='mb-5'>" . $movie->getFullMovie() . "
+                  <p class='px-5 pb-5 pt-3 mb-5 rounded-5'>" . $movie->getFullMovie() . "
                   " . $movie->director?->getDirector() . "</p>
                 
                 </li>";

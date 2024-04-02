@@ -15,6 +15,6 @@ class Director
 
     public function getDirector()
     {
-        return ' <br> Film director: ' . $this->name . ' ' . $this->surname . ' <br> Director nationality: ' . $this->nationality;
+        return ' <br> Directed by: ' . $this->name . ' ' . $this->surname . ' <br> Director nationality: ' . $this->nationality;
     }
 }
