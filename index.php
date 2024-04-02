@@ -22,19 +22,21 @@ require 'db.php';
 
 <body>
 
-    <h1>MOVIES</h1>
+    <div class="container">
+        <h1 class="text-center">MOVIES</h1>
 
-    <ul>
-        <?php
-        foreach ($movies as $movie) {
+        <ul>
+            <?php
+            foreach ($movies as $movie) {
 
-            echo "
+                echo "
             <li>
                 " . $movie->getFullMovie() . "
             </li>";
-        }
-        ?>
-    </ul>
+            }
+            ?>
+        </ul>
+    </div>
 
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
